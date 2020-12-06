@@ -43,6 +43,8 @@ export default {
             ${positionArray.join('、')}
             中的一种。
           `)
+        } else {
+          return true
         }
       }
     },

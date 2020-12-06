@@ -12,13 +12,13 @@
 
 <script lang="ts">
 import { defineComponent, toRefs, provide, reactive } from 'vue'
-type LabelPosition ='left'|'right'|'top'
+// type LabelPosition = 'left' | 'right' | 'top'
 export default defineComponent({
   name: 'AxeForm',
   props: {
     model: Object,
     labelWith: String,
-    labelPosition: String as LabelPosition
+    labelPosition: String
   },
   setup(props) {
     const { model } = toRefs(props)
