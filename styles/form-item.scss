@@ -1,0 +1,139 @@
+@import './mixins/mixins';
+
+@include Block(form-item) {
+  margin-bottom: 22px;
+
+  &:after,
+  &:before {
+    display: table;
+    content: '';
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  & & {
+    margin-bottom: 0;
+  }
+
+  & .axe-input__validateIcon {
+    display: none;
+  }
+
+  &--medium &__content,
+  &--medium &__label {
+    line-height: 36px;
+  }
+
+  &--small &__content,
+  &--small &__label {
+    line-height: 32px;
+  }
+
+  &--small.axe-form-item {
+    margin-bottom: 18px;
+  }
+
+  &--small &__error {
+    padding-top: 2px;
+  }
+
+  &--mini &__content,
+  &--mini &__label {
+    line-height: 28px;
+  }
+
+  &--mini.axe-form-item {
+    margin-bottom: 18px;
+  }
+
+  &--mini &__error {
+    padding-top: 1px;
+  }
+
+  &__label-wrap {
+    float: left;
+  }
+
+  &__label-wrap &__label {
+    display: inline-block;
+    float: none;
+  }
+
+  &__label {
+    text-align: right;
+    vertical-align: middle;
+    float: left;
+    font-size: 14px;
+    color: #606266;
+    line-height: 40px;
+    padding: 0 12px 0 0;
+    box-sizing: border-box;
+  }
+
+  &__content {
+    line-height: 40px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  &__content:after,
+  &__content:before {
+    display: table;
+    content: '';
+  }
+
+  &__content:after {
+    clear: both;
+  }
+
+  &__content .axe-input-group {
+    vertical-align: top;
+  }
+
+  &__error {
+    color: #f56c6c;
+    font-size: 12px;
+    line-height: 1;
+    padding-top: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  &__error--inline {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  &.is-required:not(.is-no-asterisk) &__label-wrap > &__label:before,
+  &.is-required:not(.is-no-asterisk) > &__label:before {
+    content: '*';
+    color: #f56c6c;
+    margin-right: 4px;
+  }
+
+  &.is-error .axe-input__inner,
+  &.is-error .axe-input__inner:focus,
+  &.is-error .axe-textarea__inner,
+  &.is-error .axe-textarea__inner:focus {
+    border-color: #f56c6c;
+  }
+
+  &.is-error .axe-input-group__append .axe-input__inner,
+  &.is-error .axe-input-group__prepend .axe-input__inner {
+    border-color: transparent;
+  }
+
+  &.is-error .axe-input__validateIcon {
+    color: #f56c6c;
+  }
+
+  &--feedback .axe-input__validateIcon {
+    display: inline-block;
+  }
+}

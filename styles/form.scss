@@ -1,0 +1,30 @@
+@import './mixins/mixins';
+
+@include Block(form) {
+  &-label-left &-item__label {
+    text-align: left;
+  }
+  &-label-top &-item__label {
+    float: none;
+    display: inline-block;
+    text-align: left;
+    padding: 0 0 10px;
+  }
+  &--inline &-item__label {
+    float: none;
+    display: inline-block;
+  }
+
+  &--inline &-item__content {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  // ? 改写
+  // &--inline.&--label-top &-item__content {
+  //   display: block;
+  // }
+  .axe-form--inline.axe-form--label-top .axe-form-item__content {
+    display: block;
+  }
+}

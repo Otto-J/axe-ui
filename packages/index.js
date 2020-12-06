@@ -5,8 +5,18 @@ import AxeButtonGroup from './button-group/'
 import AxeIcon from './icon/'
 import AxeCard from './card/'
 import AxeInput from './input/'
+import AxeForm from './form/'
+import AxeFormItem from './form-item/'
 
-const components = [AxeButton, AxeButtonGroup, AxeIcon, AxeCard, AxeInput]
+const components = [
+  AxeButton,
+  AxeButtonGroup,
+  AxeIcon,
+  AxeCard,
+  AxeInput,
+  AxeForm,
+  AxeFormItem
+]
 
 const install = (app, opts = {}) => {
   components.forEach(item => {
@@ -20,11 +30,13 @@ const install = (app, opts = {}) => {
 }
 
 export default {
-  version: '0.1.0',
+  version: '0.2.2',
   install,
   AxeButton,
   AxeButtonGroup,
   AxeIcon,
   AxeCard,
-  AxeInput
+  AxeInput,
+  AxeForm,
+  AxeFormItem
 }

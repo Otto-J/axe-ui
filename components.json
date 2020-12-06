@@ -3,5 +3,7 @@
   "button-group": "./packages/button-group/index.js",
   "icon": "./packages/icon/index.js",
   "card": "./packages/card/index.js",
-  "input": "./packages/input/index.js"
+  "input": "./packages/input/index.js",
+  "form": "./packages/form/index.js",
+  "form-item": "./packages/form-item/index.js"
 }
